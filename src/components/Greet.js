@@ -8,6 +8,12 @@ import React from 'react'
 
 
 const Greet = (props) => {
-    return <h1>Welcome to React {props.name}.</h1>
+    const {name, heroName} = props
+    return (
+        <div>
+            <h1>Welcome to React {name} a.k.a {heroName}</h1>
+            {props.children}
+        </div>
+    )
 }
 export default Greet;
